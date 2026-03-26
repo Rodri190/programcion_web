@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.info {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.info p {
+    margin: 5px 0;
+}
+
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 2px;
+    max-width: 500px;
+    margin: 0 auto;
+    aspect-ratio: 1;
+    background-color: #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.celda {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #000000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.celda.user {
+    background-color: rgb(198, 123, 123);
+    color: white;
+}
+
+.celda.computer {
+    background-color: rgb(11, 182, 48);
+}
+
+.celda:hover {
+    opacity: 0.8;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tablero {
+        max-width: 90vw;
+        padding: 5px;
+    }
+    .celda {
+        font-size: 10px;
+    }
+    .info {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .tablero {
+        max-width: 95vw;
+        gap: 1px;
+    }
+    .celda {
+        font-size: 8px;
+    }
+}
